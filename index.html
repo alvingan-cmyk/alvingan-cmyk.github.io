@@ -1,79 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Your Name here</title>
 
-    <!-- ! Apply fonts imported from Google Fonts -->
-    <!-- Insert code here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Your Name here</title>
 
-    <!-- ! Internat styes -->
-    <style>
-        /* insert styles here */
-    </style>
-  </head>
+  <!-- ! Apply fonts imported from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Insert code here -->
 
-  <body>
-    <!-- ! Start of nav (Main Navigation) -->
-     <nav>
-        <a href="#landing">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contacts">Contact</a>
-        
-     </nav>
+  <!-- ! Internat styes -->
+  <style>
+    /* CSS Variables for easy theme adjustments */
+    :root {
+      --primary-color: #2b2b2b;
+      --secondary-color: #6c757d;
+      --accent-color: #4caf50; /* A touch of green for accents */
+      
+      --light-bg-color: #d1e3f5;
+      --white: #fff; /* #fff == #ffffff */
+     
+      --border-radius: 0.5rem; /* 8px border radius */
+      
+      --transition-speed: 0.3s;
+      font-size: 100%; /* Default 16px. 1rem = 16px = 100%  */
+      
+    }
 
-    <!-- ! End of nav (Main Navigation) -->
+    /* Base Styling & Font Application */
+    /* reset all elements on the web pages, using '*' */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 10;
+      border: 10px;
 
-    <!-- ! Start of Landing section -->
-        <section>
-            <div>
-                <!-- Create a placeholder for profile image -->
-              <img 
-                src="https://placehold.co/200x200/000000/FFFFFF?text=AG" 
-                alt="Profile Picture Placeholder">
-                <!-- Name and Designation -->
-              <p>
-                <!-- Greeting -->
-                    Hello, I&apos;m
-              </p>
-              <h1>
-                <!-- My Name -->
-                    Alvin Gan
-              </h1>
-              <p>
-                <!-- My Designation -->
-                    Jr Fullstack Developer | Mid-career Professonal
-              </p>
-              <div>
-                <!-- Call to Action (Contact and CV buttons) -->
-                <a href="#contact">Contact Me</a>
-                <a href="#download">Download</a>
-              </div>
-            </div>
-        </section>
-    <!-- ! End of Landing section -->
+    }
 
-    <!-- ! Start of About Me section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of About Me section -->
+    body {
+      font-family: "Lato", Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--primary-color);
+      
+      background-color: var(--white);/* What is affected when this proprty is applied */
+      scroll-behavior: smooth;
+    }
 
-    <!-- ! Start of Experience section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Experience section -->
+    /* Reusable component */
+    /* Class selector when use full stop */
+    .section-padding {
+      padding: 5rem 1.25rem; /* 80px by 20px */
+      max-width: 75rem; /* Converts to 1200px */
+      margin: 0 auto; /* top & bottom = 0px, left and right = flushed; */
+      
+      /* border: 1px solid gray; */
+    }
 
-    <!-- ! Start of Projects section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Projects section -->
+    /* Tag selector, targetting h2 */
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 3.75rem;
+      color: var(--primary-color)
+    }
 
-    <!-- ! Start of Contact section -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Contact section -->
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center; /* horizontal alignment */
+    
+      align-items: center; /* vertical alignment */
+    
+      padding: 0.9375rem 1.25rem; /* Top, Bottom = 15px, Left, Right = 20px */
+    
+      background-color: var(--white);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    <!-- ! Start of Footer -->
-        <!-- Insert HTML syntax here -->
-    <!-- ! End of Footer -->
-  </body>
+    /* Descendant Selector */
+    nav a {
+      /* a stands for the anchor tag used */
+      margin: 0 0.9375rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: color var(--transition-speed);
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    #landing {
+      min-height: 80dvh;
+      
+      display: flex; /* When viewing landing section, take up 80% of the screen estate dynamically */
+      justify-content: center; /* Align center horizontally */
+      
+      align-items: center; /* Align center vertically */
+      
+      text-align: center; /* Align all text center */
+      
+      background-color: var(--light-bg-color);
+      border-radius: 0 0 5rem 5rem; /* tl, tr, bl, br */
+    
+    }
+
+    .landing-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .profile-pic-large{
+      width: 9.375;
+      height: 9.375;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 0.25rem solid var(--primary-color);
+      margin-bottom: 0.625rem;
+    }
+  
+    .landing-content h1{
+      font-size: 3.75rem;
+      font-weight: 700;
+      }
+
+    .landing-content p{
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-group a{
+      display: inline-block;
+      padding: 0.625rem 1.5625rem;
+      margin: 0 0.625rem;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+      border: 0.125rem solid var(--primary-color);
+    }
+
+    .primary-cta{
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .primary-cta:hover{
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      box-shadow: 0 0.25rem 0.5rem rgb(0, 0, 0,0.2);
+    }
+
+    .secondary-cta{
+      background-color: var(--white);
+      color: var(--primary-color);
+    }
+
+    .secondary-cta:hover{
+      background-color: var(--primary-color);
+      color: var(--white);
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- ! Start of nav (Main Navigation) -->
+  <nav> <!-- with anchor tags used -->
+    <a href="#landing">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contacts">Contact</a>
+
+  </nav>
+
+  <!-- ! End of nav (Main Navigation) -->
+
+  <!-- ! Start of Landing section -->
+  <section id="landing" class="section-padding">
+    <div class="landing-content">
+      <!-- Create a placeholder for profile image -->
+      <img src="https://placehold.co/200x200/000000/FFFFFF?text=AG" 
+      alt="Profile Picture Placeholder" 
+      class="profile-pic-large"
+      />
+      <!-- Name and Designation -->
+      <p>
+        <!-- Greeting -->
+        Hello, I&apos;m
+      </p>
+      <h1>
+        <!-- My Name -->
+        Alvin Gan
+      </h1>
+      <p>
+        <!-- My Designation -->
+        Jr Fullstack Developer | Mid-career Professonal
+      </p>
+      <div class="cta-group">
+        <!-- Call to Action (Contact and CV buttons) -->
+        <a class="primary-cta" href="#contact">Contact Me</a>
+        <a class="secondary-cta" href="#download">Download</a>
+      </div>
+    </div>
+  </section>
+  <!-- ! End of Landing section -->
+
+  <!-- ! Start of About Me section -->
+  <section class="section-padding">
+    <!-- Left section -->
+    <h2>
+      About Me
+    </h2>
+
+    <!-- Right section -->
+    <div>
+      <div>
+        <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait" alt="Placeholder image for Portrait">
+      </div>
+
+      <div>
+        <h3>
+          "My passion Product Development through Clean Code..."
+        </h3>
+        <!-- Overview -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse velit, deleniti quo quibusdam, magnam, incidunt
+          possimus dolore nisi ullam vel quis alias nihil. Quia impedit reprehenderit fugiat perspiciatis molestiae
+          obcaecati?
+        </p>
+      </div>
+
+      <div>
+        <!-- Container cards x2 -->
+        <h4>
+          5+ Years
+        </h4>
+      </div>
+
+      <p>
+        <!-- Personal quote -->
+        Quality Assurance
+      </p>
+
+      <div>
+        <h4>
+          Dip. Product Engineering
+        </h4>
+        <p>
+          Education
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- ! End of About Me section -->
+
+  <!-- ! Start of Experience section -->
+  <!-- Insert HTML syntax here -->
+  <!-- ! End of Experience section -->
+
+  <!-- ! Start of Projects section -->
+  <!-- Insert HTML syntax here -->
+  <!-- ! End of Projects section -->
+
+  <!-- ! Start of Contact section -->
+  <!-- Insert HTML syntax here -->
+  <!-- ! End of Contact section -->
+
+  <!-- ! Start of Footer -->
+  <!-- Insert HTML syntax here -->
+  <!-- ! End of Footer -->
+</body>
+
 </html>
