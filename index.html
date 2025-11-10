@@ -106,6 +106,7 @@
       color: var(--accent-color);
     }
 
+    /* 1. Landing Section */
     #landing {
       min-height: 80dvh;
 
@@ -187,7 +188,7 @@
       box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     }
 
-    /* About Me Section */
+    /* 2. About Me Section */
     #about {
       background-color: var(--white);
     }
@@ -202,6 +203,12 @@
       max-width: 18.75rem;
       /* Converted from 300px */
       border-radius: var(--border-radius);
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
     }
 
     .about-text {
@@ -227,7 +234,7 @@
     .info-card {
       flex: 1;
       padding: 1.25rem;
-      /* Cpnverted from 20px */
+      /* Converted from 20px */
       border: 0.0625rem solid #ddd;
       /* Converted from 1px */
       border-radius: var(--border-radius);
@@ -243,6 +250,137 @@
       margin-bottom: 0.3125rem;
       /* Comverted from 5px */
     }
+
+    /* 3. Experience Seection */
+    #experience {
+      background-color: var(--light-bg-color);
+    }
+
+    .experience-container {
+      display: flex;
+      gap: 2.5rem;
+      /* Comverted from 40px */
+      justify-content: center;
+    }
+
+    .experience-card {
+      flex: 1;
+      min-width: 18.75rem;
+      /* Converted from 300px */
+      padding: 1.875rem;
+      /* Convert from 30px */
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
+      /* Converted from 0 4px 10px */
+      text-align: center;
+    }
+
+    .experience-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5625rem;
+      /* Converted from 25px */
+      border-bottom: 0.125rem solid var(--accent-color);
+      /* Converted from 2px */
+      padding-bottom: 0.625rem;
+      /* Converted from 10px */
+      display: inline-block;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      margin-top: 0.9375rem;
+      /* Converted from 15px */
+    }
+
+    .skill-list li {
+      width: calc(50% - 0.625rem);
+      /* Converted from 10px */
+      margin-bottom: 0.9375rem;
+      /* Converted from 15px */
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      margin-right: 0.625rem;
+      /* Converted from 10px */
+    }
+
+    /* 5. Contact Me Section */
+    #contact {
+      text-align: center;
+      background-color: var(--light-bg-color);
+    }
+
+    #contact p {
+      font-size: 1.2rem;
+      margin-bottom: 1.875rem;
+      /* Converted from 30px */
+      color: var(--secondary-color);
+    }
+
+    .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5625rem;
+      /* Converted from 12px 25px */
+      margin: 0 0.9375rem;
+      /* Converted from 15px */
+      border: 0.125rem solid var(--primary-color);
+      /* Converted from 2px */
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: all var(--transition-speed);
+    }
+
+    .contact-links a:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .contact-links a span {
+      margin-right: 0.625rem;
+      /* Converted from 10px */
+      font-size: 1.2rem;
+    }
+
+    /* 6. Footer */
+    footer {
+      text-align: center;
+      padding: 1.25rem;
+      /* Converted from 20px */
+      border-top: 0.0625rem solid #eee;
+      /* Converted from 1px */
+    }
+
+    .footer-nav a {
+      margin: 0 0.625rem;
+      /* Converted from 10px */
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    .footer-nav a:hover{
+      color: var(--accent-color);
+    }
+
+    .copyright{
+      margin-top: 0.625rem; /* Converted from 10px */
+      font-size: 0.8rem;
+      color: var(--secondary-color);
+    }
+
   </style>
 </head>
 
@@ -293,7 +431,7 @@
     <h2>
       About Me
     </h2>
-    <div class="about grid">
+    <div class="about-grid">
       <div class="about-image">
         <img src="https://placehold.co/600x600/CCCCCC/6c757d?text=My+Portrait" alt="Placeholder image for portrait" />
       </div>
@@ -331,7 +469,7 @@
           architectural design patterns (e.g., MVC, microservices).
         </p>
 
-    </div>
+      </div>
   </section>
 
 
@@ -339,7 +477,33 @@
   <!-- ! End of About Me section -->
 
   <!-- ! Start of Experience section -->
-  <!-- Insert HTML syntax here -->
+  <section id="experience" class="section-padding">
+    <h2>Skills</h2>
+    <div class="experience-container">
+      <div class="experience-card">
+        <h3>Tech Stack</h3>
+        <ul class="skill-list">
+          <li>HTML5 & Semantic Markup</li>
+          <li>CSS3 (and Bootstrap)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>React</li>
+          <li>Java</li>
+          <li>Springboot (Maven)</li>
+        </ul>
+      </div>
+      <div class="experience-card">
+        <h3>Tools & Concepts</h3>
+        <ul class="skill-list">
+          <li>Version Control (Git, Github)</li>
+          <li>Client-Server Architecture</li>
+          <li>API Development</li>
+          <li>Unit Testing (Jest/jUnit)</li>
+          <li>Visual Studio Code</li>
+          <li>IntelliJ IDEA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- ! End of Experience section -->
 
   <!-- ! Start of Projects section -->
@@ -347,11 +511,28 @@
   <!-- ! End of Projects section -->
 
   <!-- ! Start of Contact section -->
-  <!-- Insert HTML syntax here -->
+<section id="contact" class="section-padding">
+  <h2>Contact Me</h2>
+  <p>Let's connect!</p>
+  <div class="contact-links">
+    <a href="mailto:john.doe@example.com"> <span>📧</span> Email Me</a>
+    <a href="https://linkedin.com/in/johndoe">
+      <span>🔗</span> Linkedin Profile
+    </a>
+  </div>
+</section>
   <!-- ! End of Contact section -->
 
   <!-- ! Start of Footer -->
-  <!-- Insert HTML syntax here -->
+<footer>
+  <div class="footer-nav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="Contact">Contact</a>
+  </div>
+  <p class="copyright">&copy; 2025 John Doe. All rights reserved.</p>
+</footer>
   <!-- ! End of Footer -->
 </body>
 
