@@ -251,13 +251,14 @@
       /* Comverted from 5px */
     }
 
-    /* 3. Experience Seection */
+    /* 3. Experience Section */
     #experience {
       background-color: var(--light-bg-color);
     }
 
     .experience-container {
       display: flex;
+      flex-direction: column;
       gap: 2.5rem;
       /* Comverted from 40px */
       justify-content: center;
@@ -327,6 +328,8 @@
       color: var(--secondary-color);
     }
 
+    
+
     .contact-links a {
       display: inline-flex;
       align-items: center;
@@ -371,16 +374,97 @@
       transition: color var(--transition-speed);
     }
 
-    .footer-nav a:hover{
+    .footer-nav a:hover {
       color: var(--accent-color);
     }
 
-    .copyright{
-      margin-top: 0.625rem; /* Converted from 10px */
+    .copyright {
+      margin-top: 0.625rem;
+      /* Converted from 10px */
       font-size: 0.8rem;
       color: var(--secondary-color);
     }
 
+    /* RESPONSIVE DESIGN (Media Queries) */
+    /* Converted from 600px */
+    @media(max-width: 37.5rem) {
+
+      /* Customise the section-padding */
+      .section-padding {
+        padding: 3.125rem 0.9375rem;
+      }
+
+      /* Wrap our navigation bar */
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .landing-content h1 {
+        font-size: 2.5rem;
+        /* Converted from 2.5em */
+      }
+
+      /* Set the about information into a single column */
+      .about-grid {
+        flex-direction: column;
+      }
+
+      .about-image {
+        /* border: 2px solid black; */
+        margin: 0 auto;
+      }
+
+      /* set the cta items in a single column */
+      .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9375rem;
+        /* border: 1px solid black; */
+      }
+
+      /* change the link inside cta group */
+      /* descendant selector ---> 'a' */
+      .cta-group a {
+        margin: 0;
+        width: 100%;
+      }
+
+      /* changes contact links format */
+      .contact-links a{
+        margin: 0.3125rem;
+        width: 40%;
+        justify-content: center;
+      }
+    }
+
+    /* TODO - add media query for "contact-links a" */
+    /* apply the styles here if the screen is <==900px (16px x 900px) */
+    @media(max-width: 56.25rem) {
+
+      /* change h2 size */
+      h2 {
+        font-size: 2rem;
+      }
+
+      /* change the about grid to a single column */
+      .about-grid {
+        flex-direction: column;
+      }
+
+      /* set portrait image to center of page */
+      .about-image {
+        margin: 0 auto;
+      }
+
+      .info-card-container {
+        flex-direction: column;
+      }
+
+      /* TODO - fix responsive layout for experiences-container */
+      /* TODO - fix responsive layout for skills-list li */
+      /* TODO - fix responsive layout for project-grid */
+      /* TODO - fix responsive layout for project-card */
+    }
   </style>
 </head>
 
@@ -511,28 +595,28 @@
   <!-- ! End of Projects section -->
 
   <!-- ! Start of Contact section -->
-<section id="contact" class="section-padding">
-  <h2>Contact Me</h2>
-  <p>Let's connect!</p>
-  <div class="contact-links">
-    <a href="mailto:john.doe@example.com"> <span>📧</span> Email Me</a>
-    <a href="https://linkedin.com/in/johndoe">
-      <span>🔗</span> Linkedin Profile
-    </a>
-  </div>
-</section>
+  <section id="contact" class="section-padding">
+    <h2>Contact Me</h2>
+    <p>Let's connect!</p>
+    <div class="contact-links">
+      <a href="mailto:john.doe@example.com"> <span>📧</span> Email Me</a>
+      <a href="https://linkedin.com/in/johndoe">
+        <span>🔗</span> Linkedin Profile
+      </a>
+    </div>
+  </section>
   <!-- ! End of Contact section -->
 
   <!-- ! Start of Footer -->
-<footer>
-  <div class="footer-nav">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="Contact">Contact</a>
-  </div>
-  <p class="copyright">&copy; 2025 John Doe. All rights reserved.</p>
-</footer>
+  <footer>
+    <div class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="Contact">Contact</a>
+    </div>
+    <p class="copyright">&copy; 2025 John Doe. All rights reserved.</p>
+  </footer>
   <!-- ! End of Footer -->
 </body>
 
