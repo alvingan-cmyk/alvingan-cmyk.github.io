@@ -7,12 +7,12 @@
     --light-bg-color: #dfe8ff;
     --white: #fff;
     /* #fff == #ffffff */
-    --border-radius: 0.5rem;
-    /* 8px border radius */
+    --border-radius: 8px;
+    /* .5rem border radius */
     --transition-speed: 0.3s;
     --color-one: #ffebdf;
     font-size: 100%;
-    /* Default 16px. 1rem = 16px = 100%  */
+    /* Default 1rem. 16px = 1rem = 100%  */
 
 
 }
@@ -23,7 +23,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 10;
-    border: 10px;
+    border: .625rem;
 
 }
 
@@ -40,23 +40,26 @@ body {
 /* Reusable component */
 /* Class selector when use full stop */
 .section-padding {
-    padding: 5rem 1.25rem;
-    /* 80px by 20px */
-    max-width: 75rem;
-    /* Converts to 1200px */
+    padding: 80px 20px;
+    /* 5rem by 1.25rem */
+    max-width: 1200px;
+    /* Converts to 75rem */
     margin: 0 auto;
-    /* top & bottom = 0px, left and right = flushed; */
+    /* top & bottom = 0rem, left and right = flushed; */
 
-    /* border: 1px solid gray; */
+    /* border: .0625rem solid gray; */
 }
 
 /* Tag selector, targetting h2 */
 h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3.75rem;
+    font-family: "Helvetica", sans-serif;
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 40px;
     color: var(--primary-color);
-    /* border: .125rem solid #ff8080; */
+    
+    border-top: .0625rem solid #7c7c7c;
 }
 
 
@@ -70,21 +73,21 @@ nav {
     align-items: center;
     /* vertical alignment */
 
-    padding: 0.9375rem 1.25rem;
-    /* Top, Bottom = 15px, Left, Right = 20px */
+    padding: 15px 20px;
+    /* Top, Bottom = .9375rem, Left, Right = 1.25rem */
 
     background-color: var(--white);
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(225, 225, 225, 0.9);
+    background-color: rgba(255, 252, 252, 0.9);
 }
 
 /* Descendant Selector */
 nav a {
     /* a stands for the anchor tag used */
-    margin: 0 0.9375rem;
+    margin: 0 15px;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 600;
@@ -112,10 +115,10 @@ nav a:hover {
 
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--color-one);
-    border-radius: 5rem 5rem 5rem 5rem;
+    border-radius: 80px 80px 80px 80px;
     /* tl, tr, bl, br */
-    border: .125rem solid #ff8080;
-    margin-top: 3rem;
+    border: 2px solid #ff8080;
+    margin-top: 48px;
 
 }
 
@@ -123,8 +126,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
-    padding: 1.25rem;
+    gap: 20px;
+    padding: 20px;
 }
 
 .profile-pic-large {
@@ -132,30 +135,30 @@ nav a:hover {
     height: 9.375;
     border-radius: 50%;
     object-fit: cover;
-    border: 0.25rem solid var(--primary-color);
-    margin-bottom: 0.625rem;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 10px;
 }
 
 .landing-content h1 {
-    font-size: 3.75rem;
+    font-size: 60px;
     font-weight: 700;
 }
 
 .landing-content p {
-    font-size: 1.2rem;
+    font-size: 19.2px;
     color: var(--secondary-color);
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
 }
 
 .cta-group a {
     display: inline-block;
-    padding: 0.625rem 1.5625rem;
-    margin: 0 0.625rem;
+    padding: 10px 25px;
+    margin: 0 10px;
     text-decoration: none;
     border-radius: var(--border-radius);
     font-weight: 600;
     transition: all var(--transition-speed);
-    border: 0.125rem solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .primary-cta {
@@ -166,7 +169,7 @@ nav a:hover {
 .primary-cta:hover {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
-    box-shadow: 0 0.25rem 0.5rem rgb(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
 }
 
 .secondary-cta {
@@ -177,7 +180,7 @@ nav a:hover {
 .secondary-cta:hover {
     background-color: var(--primary-color);
     color: var(--white);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 2. About Me Section */
@@ -188,20 +191,23 @@ nav a:hover {
 .about-image {
     flex: 1;
     text-align: center;
+    /* border: 2px solid #ff8080; */
+    
 }
 
 .about-image img {
     width: 100%;
-    max-width: 18.75rem;
-    /* Converted from 300px */
-    border-radius: var(--border-radius);
-    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    /* Converted from 18.75rem */
+    border-radius: 16px;
+    box-shadow: 0 1.375rem 3.4375rem rgba(0, 0, 0, 0.15);
 }
 
 .about-grid {
     display: flex;
-    gap: 2.5rem;
+    gap: 40px;
     align-items: flex-start;
+    /* border: 2px solid #2600fd; */
 }
 
 .about-text {
@@ -209,39 +215,38 @@ nav a:hover {
 }
 
 .about-text h3 {
-    font-size: 1.8rem;
+    font-size: 28.8px;
     font-weight: lighter;
     font-style: italic;
-    margin-bottom: 0.937rem;
-    /* Converted from 15px */
+    margin-bottom: 30px;
 }
 
 .info-card-container {
     display: flex;
-    gap: 1.25rem;
-    /* Converted from 20px */
-    margin: 1.5625rem 0;
-    /* Converted from 25px 0 */
+    gap: 20px;
+    /* Converted from 1.25rem */
+    margin: 25px 0;
+    /* Converted from 1.5625rem 0 */
 }
 
 .info-card {
     flex: 1;
-    padding: 1.25rem;
-    /* Converted from 20px */
-    border: 0.0625rem solid #ddd;
-    /* Converted from 1px */
+    padding: 20px;
+    /* Converted from 1.25rem */
+    border: 1px solid #ddd;
+    /* Converted from .0625rem */
     border-radius: var(--border-radius);
     text-align: center;
-    background-color: var(--light-bg-color);
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.05);
-    /* Converted from 0 2px 5px */
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Converted from 0 .125rem .3125rem */
 }
 
 .info-card h4 {
-    font-size: 1.2rem;
+    font-size: 19.2px;
     color: var(--accent-color);
-    margin-bottom: 0.3125rem;
-    /* Comverted from 5px */
+    margin-bottom: 5px;
+    /* Comverted from .3125rem */
 }
 
 /* 3. Experience Section */
@@ -252,33 +257,33 @@ nav a:hover {
 .experience-container {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    /* Comverted from 40px */
+    gap: 40px;
+    /* Comverted from 2.5rem */
     justify-content: center;
 }
 
 .experience-card {
     flex: 1;
-    min-width: 18.75rem;
-    /* Converted from 300px */
-    padding: 1.875rem;
-    /* Convert from 30px */
+    min-width: 300px;
+    /* Converted from 18.75rem */
+    padding: 30px;
+    /* Convert from 1.875rem */
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
-    /* Converted from 0 4px 10px */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Converted from 0 .25rem .625rem */
     text-align: center;
 }
 
 
 .experience-card h3 {
     color: var(--primary-color);
-    margin-bottom: 1.5625rem;
-    /* Converted from 25px */
-    border-bottom: 0.125rem solid var(--accent-color);
-    /* Converted from 2px */
-    padding-bottom: 0.625rem;
-    /* Converted from 10px */
+    margin-bottom: 25px;
+    /* Converted from 1.5625rem */
+    border-bottom: 2px solid var(--accent-color);
+    /* Converted from .125rem */
+    padding-bottom: 10px;
+    /* Converted from .625rem */
     display: inline-block;
 }
 
@@ -287,15 +292,15 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    margin-top: 0.9375rem;
-    /* Converted from 15px */
+    margin-top: 15px;
+    /* Converted from .9375rem */
 }
 
 .skill-list li {
-    width: calc(50% - 0.625rem);
-    /* Converted from 10px */
-    margin-bottom: 0.9375rem;
-    /* Converted from 15px */
+    width: calc(50% - 10px);
+    /* Converted from .625rem */
+    margin-bottom: 15px;
+    /* Converted from .9375rem */
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -304,9 +309,9 @@ nav a:hover {
 .skill-list li::before {
     content: "•";
     color: var(--accent-color);
-    font-size: 1.2rem;
-    margin-right: 0.625rem;
-    /* Converted from 10px */
+    font-size: 19.2px;
+    margin-right: 10px;
+    /* Converted from .625rem */
 }
 
 
@@ -316,26 +321,26 @@ nav a:hover {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.875rem;
-    /* Converted from 30px */
+    gap: 30px;
+    /* Converted from 1.875rem */
     justify-content: center;
 }
 
 .project-card {
-    flex-basis: calc(33.333% - 1.25rem);
-    min-width: 17.5rem;
+    flex-basis: calc(33.333% - 20px);
+    min-width: 280px;
     background-color: var(--white);
     border-radius: var(--border-radius);
-    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
-    /* Converted from 0 4px 15px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Converted from 0 .25rem .9375rem */
     overflow: hidden;
     transition: transform var(--transition-speed);
-    border: 2px solid rgb(47, 0, 255);
+    border: .125rem solid rgb(47, 0, 255);
 }
 
 .project-card .project-image {
     width: 100%;
-    height: 10rem;
+    height: 160px;
     /* use auto to have the height adjusted relative */
     background-repeat: no-repeat;
     background-position: center center;
@@ -345,49 +350,49 @@ nav a:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-0.3125rem);
-    /* Converted from -5px */
+    transform: translateY(-5px);
+    /* Converted from -0.3125rem */
 }
 
 .project-image {
     width: 100%;
-    height: 12.5rem;
-    /* Converted from 200px */
+    height: 200px;
+    /* Converted from 12.5rem */
     background-color: var(--light-bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 24px;
     /* Converted from 1.5em */
     color: var(--secondary-color);
-    border: 2px solid red;
+    border: .125rem solid red;
 }
 
 .project-details {
-    padding: 1.25rem;
-    /* Converted from 20px */
+    padding: 20px;
+    /* Converted from 1.25rem */
 }
 
 .project-details h3 {
-    font-size: 1.5rem;
+    font-size: 24px;
     /* Converted from 1.5em */
-    margin-bottom: 0.625rem;
-    /* Converted from 10px */
+    margin-bottom: 10px;
+    /* Converted from .625rem */
     text-align: left;
 }
 
 .project-details p {
     color: var(--secondary-color);
-    margin-bottom: 0.9375rem;
-    /* Converted from 15px */
-    font-size: 0.95rem;
+    margin-bottom: 15px;
+    /* Converted from .9375rem */
+    font-size: 15.2px;
     /* Converted from 0.95em */
 }
 
 .project-links a {
     display: inline-block;
-    margin-right: 0.9375rem;
-    /* Converted from 15px */
+    margin-right: 15px;
+    /* Converted from .9375rem */
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
@@ -400,9 +405,9 @@ nav a:hover {
 }
 
 #contact p {
-    font-size: 1.2rem;
-    margin-bottom: 1.875rem;
-    /* Converted from 30px */
+    font-size: 19.2px;
+    margin-bottom: 30px;
+    /* Converted from 1.875rem */
     color: var(--secondary-color);
 }
 
@@ -411,12 +416,12 @@ nav a:hover {
 .contact-links a {
     display: inline-flex;
     align-items: center;
-    padding: 0.75rem 1.5625rem;
-    /* Converted from 12px 25px */
-    margin: 0 0.9375rem;
-    /* Converted from 15px */
-    border: 0.125rem solid var(--primary-color);
-    /* Converted from 2px */
+    padding: 12px 25px;
+    /* Converted from .75rem 1.5625rem */
+    margin: 0 15px;
+    /* Converted from .9375rem */
+    border: 2px solid var(--primary-color);
+    /* Converted from .125rem */
     border-radius: var(--border-radius);
     text-decoration: none;
     color: var(--primary-color);
@@ -430,23 +435,23 @@ nav a:hover {
 }
 
 .contact-links a span {
-    margin-right: 0.625rem;
-    /* Converted from 10px */
-    font-size: 1.2rem;
+    margin-right: 10px;
+    /* Converted from .625rem */
+    font-size: 19.2px;
 }
 
 /* 6. Footer */
 footer {
     text-align: center;
-    padding: 1.25rem;
-    /* Converted from 20px */
-    border-top: 0.0625rem solid #eee;
-    /* Converted from 1px */
+    padding: 20px;
+    /* Converted from 1.25rem */
+    border-top: 1px solid #eee;
+    /* Converted from .0625rem */
 }
 
 .footer-nav a {
-    margin: 0 0.625rem;
-    /* Converted from 10px */
+    margin: 0 10px;
+    /* Converted from .625rem */
     color: var(--secondary-color);
     text-decoration: none;
     transition: color var(--transition-speed);
@@ -457,19 +462,19 @@ footer {
 }
 
 .copyright {
-    margin-top: 0.625rem;
-    /* Converted from 10px */
-    font-size: 0.8rem;
+    margin-top: 10px;
+    /* Converted from .625rem */
+    font-size: 12.8px;
     color: var(--secondary-color);
 }
 
 /* RESPONSIVE DESIGN (Media Queries) */
-/* Converted from 600px */
-@media(max-width: 37.5rem) {
+/* Converted from 37.5rem */
+@media(max-width: 600px) {
 
     /* Customise the section-padding */
     .section-padding {
-        padding: 3.125rem 0.9375rem;
+        padding: 50px 15px;
     }
 
     /* Wrap our navigation bar */
@@ -478,7 +483,7 @@ footer {
     }
 
     .landing-content h1 {
-        font-size: 2.5rem;
+        font-size: 40px;
         /* Converted from 2.5em */
     }
 
@@ -488,7 +493,7 @@ footer {
     }
 
     .about-image {
-        /* border: 2px solid black; */
+        /* border: .125rem solid black; */
         margin: 0 auto;
     }
 
@@ -496,8 +501,8 @@ footer {
     .cta-group {
         display: flex;
         flex-direction: column;
-        gap: 0.9375rem;
-        /* border: 1px solid black; */
+        gap: 15px;
+        /* border: .0625rem solid black; */
     }
 
     /* change the link inside cta group */
@@ -509,19 +514,19 @@ footer {
 
     /* changes contact links format */
     .contact-links a {
-        margin: 0.3125rem;
+        margin: 5px;
         width: 40%;
         justify-content: center;
     }
 }
 
 /* TODO - add media query for "contact-links a" */
-/* apply the styles here if the screen is <==900px (16px x 900px) */
-@media(max-width: 56.25rem) {
+/* apply the styles here if the screen is <==56.25rem (1rem x 56.25rem) */
+@media(max-width: 900px) {
 
     /* change h2 size */
     h2 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     /* change the about grid to a single column */
