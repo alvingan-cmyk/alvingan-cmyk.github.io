@@ -1,12 +1,13 @@
 /* CSS Variables for easy theme adjustments */
 :root {
     --primary-color: #2b2b2b;
-    --secondary-color: #2600a2;
-    --accent-color: #1a1f27; /* A touch of blue for accents */
-    --light-bg-color: #a4b8df;
+    --secondary-color: #320daa;
+    --accent-color: #0a172d; /* A touch of blue for accents */
+    --light-bg-color: #dfe8ff;
     --white: #fff; /* #fff == #ffffff */
     --border-radius: 0.5rem; /* 8px border radius */
     --transition-speed: 0.3s;
+    --color-one:#ffebdf;
     font-size: 100%; /* Default 16px. 1rem = 16px = 100%  */
    
 
@@ -89,7 +90,7 @@ nav a:hover {
 
 /* 1. Landing Section */
 #landing {
-    min-height: 80dvh;
+    min-height: 20dvh;
 
     display: flex;
     /* When viewing landing section, take up 80% of the screen estate dynamically */
@@ -102,9 +103,12 @@ nav a:hover {
     text-align: center;
     /* Align all text center */
 
-    background-color: var(--light-bg-color);
-    border-radius: 0 0 5rem 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-one);
+    border-radius: 5rem 5rem 5rem 5rem;
     /* tl, tr, bl, br */
+    border: .125rem solid #ff8080;
+    margin-top: 3rem;
 
 }
 
@@ -184,6 +188,7 @@ nav a:hover {
     max-width: 18.75rem;
     /* Converted from 300px */
     border-radius: var(--border-radius);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.15);
 }
 
 .about-grid {
@@ -258,19 +263,6 @@ nav a:hover {
     text-align: center;
 }
 
-.project-card .project-image{
-    width: 100%;
-    height: 10rem; /* use auto to have the height adjusted relative */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-    background-image: url("https://placehold.co/100x100/orange/white?text=Image Placeholder");
-}
-
-.project-card:hover{
-    transform: translateY(-0.3125rem); /* converted from -5px */
-}
 
 .experience-card h3 {
     color: var(--primary-color);
@@ -310,57 +302,10 @@ nav a:hover {
     /* Converted from 10px */
 }
 
-    <section id="projects" class="section-padding">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image">Project 1</div>
-          <div class="project-details">
-            <h3>Capstone project</h3>
-            <p>
-              Developed a dynamic, product cart application with authentication
-              and checkout features.
-            </p>
-            <div class="project-links">
-              <a href="#">View Demo</a>
-              <a href="#">GitHub Repo</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-image">Project 2</div>
-          <div class="project-details">
-            <h3>Spotify Playlist</h3>
-            <p>
-              Designed and styled a dashboard in React that captures user's
-              playlist through Spotify APIs.
-            </p>
-            <div class="project-links">
-              <a href="#">View Demo</a>
-              <a href="#">GitHub Repo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-image">Project 3</div>
-          <div class="project-details">
-            <h3>Student Enrolment System</h3>
-            <p>
-              Created an enrolment system to track students' course-enrolments
-              and grade performance.
-            </p>
-            <div class="project-links">
-              <a href="#">View Demo</a>
-              <a href="#">GitHub Repo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 /* --- 4. PROJECTS SECTION --- */
+
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -369,13 +314,24 @@ nav a:hover {
 }
 
 .project-card {
-    flex-basis: calc(33.333% - 1.25rem); /* Converted from 20px */
-    min-width: 17.5rem; /* Converted from 280px */
+    flex-basis: calc(33.333% - 1.25rem); 
+    min-width: 17.5rem; 
     background-color: var(--white);
     border-radius: var(--border-radius);
     box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 15px */
     overflow: hidden;
     transition: transform var(--transition-speed);
+     border: 2px solid rgb(47, 0, 255);   
+}
+
+.project-card .project-image{
+    width: 100%;
+    height: 10rem; /* use auto to have the height adjusted relative */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    background-image: url("https://placehold.co/100x100/orange/white?text=Image Placeholder");
 }
 
 .project-card:hover {
@@ -391,6 +347,7 @@ nav a:hover {
     justify-content: center;
     font-size: 1.5rem; /* Converted from 1.5em */
     color: var(--secondary-color);
+    border: 2px solid red;
 }
 
 .project-details {
