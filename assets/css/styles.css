@@ -1,20 +1,25 @@
 /* CSS Variables for easy theme adjustments */
 :root {
     --primary-color: #2b2b2b;
-    --secondary-color: #320daa;
-    --accent-color: #0a172d;
-    /* A touch of blue for accents */
-    --light-bg-color: #dfe8ff;
+    --secondary-color: #7B7B7B;
+    --tertiary-color: #F8F8F8;
+    --nav-color: #f8f8f8f1;
+    --accent-color: #6e84e7;
     --white: #fff;
     /* #fff == #ffffff */
     --border-radius: .5rem;
     /* .5rem border radius */
-    --transition-speed: 0.3s;
-    --color-one: #ffebdf;
+    --transition-speed: 0.15s;
     font-size: 100%;
     /* Default 1rem. 16px = 1rem = 100%  */
 
-
+    .inter-fontstyle,
+    .landing-content h1 {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: -0.03em;
+}
 }
 
 /* Base Styling & Font Application */
@@ -33,7 +38,7 @@ body {
     line-height: 1.6;
     color: var(--primary-color);
 
-    background-color: var(--white);
+    background-color: var(--tertiary-color);
     /* What is affected when this proprty is applied */
     scroll-behavior: smooth;
 }
@@ -53,8 +58,9 @@ body {
 
 /* Tag selector, targetting h2 */
 h2 {
-    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-    font-size: 2.25rem;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 1.875rem;
     /* padding: 0px 40px 40px; */
@@ -77,12 +83,11 @@ nav {
     padding: .9375rem 1.25rem;
     /* Top, Bottom = .9375rem, Left, Right = 1.25rem */
 
-    background-color: var(--white);
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
+    background-color: var(--nav-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(255, 252, 252, 0.9);
 }
 
 /* Descendant Selector */
@@ -93,6 +98,7 @@ nav a {
     color: var(--primary-color);
     font-weight: 600;
     transition: color var(--transition-speed);
+
 }
 
 nav a:hover {
@@ -115,12 +121,11 @@ nav a:hover {
     /* Align all text center */
 
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-one);
-    border-radius: 5rem 5rem 5rem 5rem;
+    background-color: var(--tertiary-color);
+    /* border-radius: 5rem 5rem 5rem 5rem; */
     /* tl, tr, bl, br */
-    border: .125rem solid #ff8080;
     margin-top: 3rem;
-
+    border: .125rem solid #ff8080;
 }
 
 .landing-content {
@@ -141,10 +146,9 @@ nav a:hover {
     
 }
 
-.landing-content h1 {
-    font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
-    font-size: 3.75rem;
-    font-weight: 700;
+.landing-content h1.title {
+    font-weight: 300;
+    font-size: 70px;
 }
 
 .landing-content p {
@@ -199,9 +203,9 @@ nav a:hover {
 }
 
 .about-image img {
-    width: 100%;
+    width: 70%;
     max-width: 300px;
-    margin: .625rem 0 0 0;
+    margin: 50px 0 0 0;
     border-radius: 1rem;
     box-shadow: 0 1.375rem 3.4375rem rgba(0, 0, 0, 0.15);
     /* border: .125rem solid #2600fd; */
@@ -221,10 +225,24 @@ nav a:hover {
 }
 
 .about-text h3 {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 300;
     font-size: 1.8rem;
-    font-weight: lighter;
     font-style: italic;
     margin-bottom: 1.875rem;
+}
+
+.about-container {
+    /* Your existing background code */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca50' d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: 650px 0px; /* move from Left and Top */
+    z-index: -1;
+    opacity: 1;
+    /* border: .125rem solid #2600fd; */
+    /* color: #cacaca50; */
+
 }
 
 .info-card-container {
@@ -256,24 +274,26 @@ nav a:hover {
     /* Comverted from .3125rem */
 }
 
-.bi-bi-arrow-down-right-square {
-  width: 1.5625rem;  /* Set your width */
-  height: 1.5625rem; /* Keep height the same for 1:1 ratio */
-  color: #ff8080; /* You can also set the color here! */
+.bi-bi-grip-vertical {
+  width: 20px;  /* Set your width */
+  height: 20px; /* Keep height the same for 1:1 ratio */
+  margin-bottom: 3px;
+  /* color: #ff8080; */
 }
-
 
 /* 3. Experience Section */
-#experience {
-    background-color: var(--light-bg-color);
+#experience-container {
+    background-color: var(--white);
+    /* border: .125rem solid #2600fd; */
 }
 
-.experience-container {
+.experience-grid {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     /* Comverted from 2.5rem */
     justify-content: center;
+    /* border: .125rem solid #2600fd; */
 }
 
 .experience-card {
@@ -372,7 +392,7 @@ nav a:hover {
     width: 100%;
     height: 200px;
     /* Converted from 12.5rem */
-    background-color: var(--light-bg-color);
+    background-color: var(--tertiary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +435,7 @@ nav a:hover {
 /* 5. Contact Me Section */
 #contact {
     text-align: center;
-    background-color: var(--light-bg-color);
+    background-color: var(--tertiary-color);
 }
 
 #contact p {

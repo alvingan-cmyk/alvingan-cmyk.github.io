@@ -22,9 +22,9 @@
   <nav> <!-- with anchor tags used -->
     <a href="#landing">Home</a>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <!-- <a href="#experience">Experience</a> -->
     <a href="#projects">Projects</a>
-    <a href="#contacts">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- ! End of nav (Main Navigation) -->
@@ -40,9 +40,10 @@
         <!-- Greeting -->
         Hello, I&apos;m
       </p>
-      <h1>
+      <h1 class="title">
         <!-- My Name -->
-        Junior Full Stack Developer
+        Full Stack Developer <br>
+        3D Artist
       </h1>
       <p>
         <!-- My Designation -->
@@ -60,54 +61,60 @@
   <!-- ! Start of About Me section -->
   <section id="about" class="section-padding">
     <!-- Left section -->
-    <div>
+    <div class="about-container">
       <h2>
-        <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-arrow-down-right-square" viewBox="0 0 16 16">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-grip-vertical" viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 3.146a.5.5 0 1 0-.708.708L9.243 9.95H6.475a.5.5 0 1 0 0 1h3.975a.5.5 0 0 0 .5-.5V6.475a.5.5 0 1 0-1 0v2.768z" />
+        </svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-grip-vertical" viewBox="0 0 16 16">
+          <path
+            d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
         </svg>
 
-        About
+        About Me
       </h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-image">
-        <img src="./assets/img/alvingan.jpeg" alt="Placeholder image for portrait" />
-      </div>
-      <div class="about-text">
 
-        <h3>
-          "I started with a curiosity for writing code, and that passion has grown into creating meaningful web
-          solutions."
-        </h3>
-        <p>
-          <b>Junior Full Stack Developer</b> with hands-on training in Front-end and Back-end solutions through
-          <b>Generation SG</b>’s industry-aligned SCTP Programme. Over 10+ years of experience in 3D production and
-          education, I bring strong problem-solving skills, structured thinking, and cross-functional collaboration to
-          development teams. Passionate about building reliable, user-centered applications while continuously growing
-          as a developer.
-        </p>
-
-        <!-- Container cards x2 -->
-        <div class="info-card-container">
-          <div class="info-card">
-            <h4>10+ Years</h4>
-            <p>3D Artist/ 2D Artist/ Educator</p>
-          </div>
-          <div class="info-card">
-            <!-- <h4>Dip. Product Engineering</h4> -->
-            <h4>Dip. Digital Visual Effects and Animation (Modeling)</h4>
-            <p>Education</p>
-          </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="./assets/img/alvingan.jpeg" alt="Placeholder image for portrait" />
         </div>
+        <div class="about-text">
 
-        <p>
-          I believe in writing code that is readable by others. Currently
-          exploring advanced techniques in fullstack dev., best practices and
-          architectural design patterns (e.g., MVC, microservices).
-        </p>
+          <h3>
+            "I started with a curiosity for writing code, and that passion has grown into creating meaningful web
+            solutions."
+          </h3>
+          <p>
+            <b>Junior Full Stack Developer</b> with hands-on training in Front-end and Back-end solutions through
+            <b>Generation SG</b>’s industry-aligned SCTP Programme. Over 10+ years of experience in 3D production and
+            education, I bring strong problem-solving skills, structured thinking, and cross-functional collaboration to
+            development teams. Passionate about building reliable, user-centered applications while continuously growing
+            as a developer.
+          </p>
 
+          <!-- Container cards x2 -->
+          <div class="info-card-container">
+            <div class="info-card">
+              <h4>10+ Years</h4>
+              <p>3D Artist/ 2D Artist/ Educator</p>
+            </div>
+            <div class="info-card">
+              <!-- <h4>Dip. Product Engineering</h4> -->
+              <h4>Dip. Digital Visual Effects and Animation (Modeling)</h4>
+              <p>Education</p>
+            </div>
+          </div>
+
+          <p>
+            I believe in writing code that is readable by others. Currently
+            exploring advanced techniques in fullstack dev., best practices and
+            architectural design patterns (e.g., MVC, microservices).
+          </p>
+
+        </div>
       </div>
+    </div>
   </section>
 
 
@@ -115,16 +122,16 @@
   <!-- ! End of About Me section -->
 
   <!-- ! Start of Experience section -->
-  <section id="experience" class="section-padding">
+  <section id="experience-container" class="section-padding">
     <h2>
-      <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-arrow-down-right-square" viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-          d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.854 3.146a.5.5 0 1 0-.708.708L9.243 9.95H6.475a.5.5 0 1 0 0 1h3.975a.5.5 0 0 0 .5-.5V6.475a.5.5 0 1 0-1 0v2.768z" />
+      <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-grip-vertical" viewBox="0 0 16 16">
+        <path
+          d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
       </svg>
 
       Skills
     </h2>
-    <div class="experience-container">
+    <div class="experience-grid">
       <div class="experience-card">
         <h3>Tech Stack</h3>
         <ul class="skill-list">
@@ -153,7 +160,15 @@
 
   <!-- ! Start of Projects section -->
   <section id="projects" class="section-padding">
-    <h2>Projects</h2>
+    <h2>
+      <svg xmlns="http://www.w3.org/2000/svg" class="bi-bi-grip-vertical" viewBox="0 0 16 16">
+        <path
+          d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+      </svg>
+
+      Projects
+
+    </h2>
     <div class="projects-grid">
       <div class="project-card">
         <img class="project-image" src="assets/img/mobile-app.jpg">
