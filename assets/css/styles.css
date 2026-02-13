@@ -3,7 +3,7 @@
     --primary-color: #2b2b2b;
     --secondary-color: #7B7B7B;
     --tertiary-color: #F8F8F8;
-    --nav-color: #f8f8f8f1;
+    --nav-color: #f8f8f8f1; /* controls nav color opacity */
     --accent-color: #6e84e7;
     --white: #fff;
     /* #fff == #ffffff */
@@ -12,13 +12,14 @@
     --transition-speed: 0.15s;
     font-size: 100%;
     /* Default 1rem. 16px = 1rem = 100%  */
-
+    
     .inter-fontstyle,
+    .landing-content .cta-group,
     .landing-content h1 {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 300;
     font-size: 3.75rem;
-    letter-spacing: -0.03em;
+    
 }
 }
 
@@ -52,7 +53,7 @@ body {
     /* Converts to 75rem */
     margin: 0 auto;
     /* top & bottom = 0rem, left and right = flushed; */
-
+    
     /* border: .0625rem solid gray; */
 }
 
@@ -93,7 +94,7 @@ nav {
 /* Descendant Selector */
 nav a {
     /* a stands for the anchor tag used */
-    margin: 0 .9375rem;
+    margin: 10px 25px;
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 600;
@@ -122,10 +123,17 @@ nav a:hover {
 
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--tertiary-color);
-    /* border-radius: 5rem 5rem 5rem 5rem; */
+    border-radius: 5rem 5rem 5rem 5rem;
+    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); */
     /* tl, tr, bl, br */
     margin-top: 3rem;
-    border: .125rem solid #ff8080;
+    margin-bottom: 20px;
+    padding: 20px; /* top, right, btm, left */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca30' d='M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6'/%3E%3C/svg%3E");
+    background-size: 40%;
+    background-position: 120px; 
+    
+    /* border: .125rem solid #ff8080; */
 }
 
 .landing-content {
@@ -136,19 +144,41 @@ nav a:hover {
     padding: 1.25rem;
 }
 
+/* This is the 150px "Window" */
+.profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden; /* This clips the zoom so it stays a circle */
+    margin: 0 auto -20px auto; /* Centers the circle and keeps your margin-bottom */
+    /* border: .25rem solid var(--primary-color); */
+    
+}
+
+/* This is the Actual Image inside */
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* USE TRANSFORM TO ZOOM */
+    transform: scale(1.2); 
+}
+
 .profile-pic-large {
-    width: 9.375;
-    height: 9.375;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: .25rem solid var(--primary-color);
-    margin-bottom: .625rem;
+    margin-bottom: -20px;
     
 }
 
 .landing-content h1.title {
     font-weight: 300;
     font-size: 70px;
+    letter-spacing: -0.03em;
 }
 
 .landing-content p {
@@ -163,7 +193,7 @@ nav a:hover {
     margin: 0 .625rem;
     text-decoration: none;
     border-radius: var(--border-radius);
-    font-weight: 600;
+    font-size: 1.2rem;
     transition: all var(--transition-speed);
     border: .125rem solid var(--primary-color);
 }
@@ -190,9 +220,24 @@ nav a:hover {
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
 }
 
+.arrow-down {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    width: 100%;             /* Ensure it spans the whole width */
+    margin-top: 0rem;        /* Move it down from whatever is above it */
+}
+
+.arrow-down svg {
+    width: 3rem;   /* Adjust size as needed */
+    height: 3rem;
+    fill: #1b1b1b25; /* Uses your variable or a default */
+    /* transform: rotate(-45deg); */
+    
+}
 /* 2. About Me Section */
 #about {
     background-color: var(--white);
+    z-index: -100;
 }
 
 .about-image {
