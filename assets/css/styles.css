@@ -8,6 +8,7 @@
     --white: #fff;
     /* #fff == #ffffff */
     --border-radius: .5rem;
+    --button-radius: 2.2rem;
     /* .5rem border radius */
     --transition-speed: 0.15s;
     font-size: 100%;
@@ -127,8 +128,8 @@ nav a:hover {
     /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); */
     /* tl, tr, bl, br */
     margin-top: 3rem;
-    margin-bottom: 20px;
-    padding: 20px; /* top, right, btm, left */
+    margin-bottom: 0px;
+    padding: 0px; /* top, right, btm, left */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca30' d='M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6'/%3E%3C/svg%3E");
     background-size: 40%;
     background-position: 120px; 
@@ -150,7 +151,7 @@ nav a:hover {
     height: 150px;
     border-radius: 50%;
     overflow: hidden; /* This clips the zoom so it stays a circle */
-    margin: 0 auto -20px auto; /* Centers the circle and keeps your margin-bottom */
+    margin: 0 auto -10px auto; /* Centers the circle and keeps your margin-bottom */
     /* border: .25rem solid var(--primary-color); */
     
 }
@@ -177,22 +178,41 @@ nav a:hover {
 
 .landing-content h1.title {
     font-weight: 300;
-    font-size: 70px;
+    font-size: 80px;
     letter-spacing: -0.03em;
 }
 
 .landing-content p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--secondary-color);
     margin-bottom: 1.25rem;
+    
 }
+
+.landing-content p.short-border {
+  position: relative; /* Container must be relative */
+   
+}
+
+.short-border::after {
+  content: "";          /* To create this element: "border" */
+  position: absolute;
+  left: 25%;
+  top: -20px;           /* Position of the "border" */
+  width: 50%;           /* Length of the "border"*/
+  height: 1px;        /* Thickness of the "border" */
+  background: black;  /* Color of the "border" */
+  
+}
+
+
 
 .cta-group a {
     display: inline-block;
     padding: .625rem 1.5625rem;
     margin: 0 .625rem;
     text-decoration: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--button-radius);
     font-size: 1.2rem;
     transition: all var(--transition-speed);
     border: .125rem solid var(--primary-color);
@@ -228,9 +248,9 @@ nav a:hover {
 }
 
 .arrow-down svg {
-    width: 3rem;   /* Adjust size as needed */
+    width: 3rem;             /* Adjust size as needed */
     height: 3rem;
-    fill: #1b1b1b25; /* Uses your variable or a default */
+    fill: #1b1b1b25;       /* Uses your variable or a default */
     /* transform: rotate(-45deg); */
     
 }
@@ -250,7 +270,7 @@ nav a:hover {
 .about-image img {
     width: 70%;
     max-width: 300px;
-    margin: 50px 0 0 0;
+    margin: 60% 0 0 0;
     border-radius: 1rem;
     box-shadow: 0 1.375rem 3.4375rem rgba(0, 0, 0, 0.15);
     /* border: .125rem solid #2600fd; */
@@ -501,7 +521,7 @@ nav a:hover {
     /* Converted from .9375rem */
     border: .125rem solid var(--primary-color);
     /* Converted from .125rem */
-    border-radius: var(--border-radius);
+    border-radius: var(--button-radius);
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 600;
