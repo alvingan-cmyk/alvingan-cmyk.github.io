@@ -675,7 +675,7 @@ footer {
 
 /* RESPONSIVE DESIGN (Media Queries) */
 /* Converted from 37.5rem */
-@media(max-width: 37.5rem) {
+@media(max-width: 650px) {
 
     /* Customise the section-padding */
     .section-padding {
@@ -729,6 +729,24 @@ footer {
         width: 40%;
         justify-content: center;
     }
+
+    .project-card {
+        /* Force the card to take up the full available width */
+        flex-basis: 100%;
+        
+        /* Remove or reduce min-width so it doesn't overflow small screens */
+        min-width: 0; 
+        
+        /* Optional: adjust margins if the container has its own padding */
+        margin: 0;
+    }
+
+    .projects-grid {
+        /* Reduce the gap slightly for mobile to give the cards more breathing room */
+        gap: 1.25rem;
+        padding: 0 1rem; /* Ensures the card doesn't touch the very edge of the screen */
+    }
+
 }
 
 /* TODO - add media query for "contact-links a" */
@@ -743,6 +761,14 @@ footer {
     /* change the about grid to a single column */
     .about-grid {
         flex-direction: column;
+        align-items: center; /* Centers the content vertically */
+        text-align: center;  /* Optional: centers text for a better mobile look */
+    }
+
+    .about-text {
+        margin: 0; /* Removes the negative margin used for desktop spacing */
+        flex: none;
+        width: 100%;
     }
 
     /* set portrait image to center of page */
