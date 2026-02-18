@@ -15,13 +15,17 @@
     /* Default 1rem. 16px = 1rem = 100%  */
     
     .inter-fontstyle,
-    .landing-content .cta-group,
-    .landing-content h1 {
+    .landing-content .cta-group {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 300;
     font-size: 3.75rem;
-    
-}
+    }
+
+    .landing-content h1,
+    .landing-content p {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
 }
 
 /* Base Styling & Font Application */
@@ -29,9 +33,13 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 10;
+    padding: 0;
     border: .625rem;
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -48,7 +56,7 @@ body {
 /* Reusable component */
 /* Class selector when use full stop */
 .section-padding {
-    padding: 5rem 1.25rem;
+    padding: 40px 20px 30px;
     /* 5rem by 1.25rem */
     max-width: 1200px;
     /* Converts to 75rem */
@@ -68,7 +76,7 @@ h2 {
     /* padding: 0px 40px 40px; */
     color: var(--primary-color);
     
-    border-top: .0625rem solid #7c7c7c;
+    border-top: .0625rem solid #7c7c7c;     /* the border acts as a divider line for different section */
 }
 
 
@@ -133,8 +141,9 @@ nav a:hover {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca30' d='M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6'/%3E%3C/svg%3E");
     background-size: 40%;
     background-position: 120px; 
-    
+    scroll-margin-top: 100px; /* the top margin given when click on different sections */
     /* border: .125rem solid #ff8080; */
+    
 }
 
 .landing-content {
@@ -176,14 +185,28 @@ nav a:hover {
     
 }
 
-.landing-content h1.title {
+.landing-content h1 {
     font-weight: 300;
-    font-size: 80px;
+    font-size: 5rem;
     letter-spacing: -0.03em;
 }
 
+
+.landing-content.gridlines {
+border: 1px solid #0f0f0f;
+  /* box-shadow can "fake" the grid lines extending from the box */
+  box-shadow: 
+    0 40px 0 -39px #0f0f0f, 
+    0 -40px 0 -39px #0f0f0f,
+    40px 0 0 -39px #0f0f0f,
+    -40px 0 0 -39px #0f0f0f;
+    
+
+}
+
 .landing-content p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 390;
     color: var(--secondary-color);
     margin-bottom: 1.25rem;
     
@@ -206,58 +229,91 @@ nav a:hover {
 }
 
 
-
+/* Button styles */
 .cta-group a {
     display: inline-block;
-    padding: .625rem 1.5625rem;
+    padding: .3rem 1.3rem;
     margin: 0 .625rem;
     text-decoration: none;
     border-radius: var(--button-radius);
     font-size: 1.2rem;
     transition: all var(--transition-speed);
-    border: .125rem solid var(--primary-color);
+    transform: translate(0px, -40px);
+    /* border: .125rem solid var(--primary-color); */
 }
 
-.primary-cta {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.primary-cta:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    box-shadow: 0 .25rem .5rem rgb(0, 0, 0, 0.2);
-}
-
-.secondary-cta {
+.cta-resume {
     background-color: var(--white);
+    border: .125rem solid var(--secondary-color);
     color: var(--primary-color);
 }
 
-.secondary-cta:hover {
-    background-color: var(--primary-color);
+.cta-resume:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
     color: var(--white);
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
 }
 
-.arrow-down {
+.cta-github {
+    background-color: var(--white);
+    border: .125rem solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.cta-github:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 .25rem .5rem rgb(0, 0, 0, 0.2);
+}
+
+.cta-linkedin {
+    background-color: var(--white);
+    border: .125rem solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.cta-linkedin:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+}
+
+.cta-contact {
+    background-color: var(--white);
+    border: .125rem solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.cta-contact:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 .25rem .5rem rgb(0, 0, 0, 0.2);
+}
+
+.scroll-down {
     display: flex;
     justify-content: center; /* Horizontal center */
     width: 100%;             /* Ensure it spans the whole width */
     margin-top: 0rem;        /* Move it down from whatever is above it */
 }
 
-.arrow-down svg {
-    width: 3rem;             /* Adjust size as needed */
-    height: 3rem;
-    fill: #1b1b1b25;       /* Uses your variable or a default */
-    /* transform: rotate(-45deg); */
+ .arrow-down svg {
+    width: 1.5rem;                  /* Adjust size */
+    height: 1.5rem;
+    fill: #1b1b1b49;              /* set the color */
+    transform: translateY(0px);     /* set the vertical position */
     
 }
 /* 2. About Me Section */
 #about {
     background-color: var(--white);
     z-index: -100;
+    scroll-margin-top: 60px;    /* the top margin given when click on different sections */
+    
 }
 
 .about-image {
@@ -270,7 +326,7 @@ nav a:hover {
 .about-image img {
     width: 70%;
     max-width: 300px;
-    margin: 60% 0 0 0;
+    margin: 10% 0 0 0;
     border-radius: 1rem;
     box-shadow: 0 1.375rem 3.4375rem rgba(0, 0, 0, 0.15);
     /* border: .125rem solid #2600fd; */
@@ -302,7 +358,7 @@ nav a:hover {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca50' d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 200px;
-    background-position: 650px 0px; /* move from Left and Top */
+    background-position: 650px 0px;         /* move from Left and Top */
     z-index: -1;
     opacity: 1;
     /* border: .125rem solid #2600fd; */
@@ -386,23 +442,34 @@ nav a:hover {
     display: inline-block;
 }
 
+.experience-card h3.techstack {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236e84e7' class='bi bi-stack' viewBox='0 0 16 16'%3E%3Cpath d='m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z'/%3E%3Cpath d='m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-size: 25px; /* Adjust size of the icon */
+background-position: left;
+background-position: 0px 0px;         /* move from Left and Top */
+padding-left: 35px;               /* This prevents the clipping of the icon */
+
+}
+
 .skill-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     text-align: left;
     margin-top: .9375rem;
+    flex-direction: column;
     /* Converted from .9375rem */
 }
 
 .skill-list li {
-    width: calc(50% - .625rem);
+    width: calc(100% - .625rem);
     /* Converted from .625rem */
     margin-bottom: .9375rem;
     /* Converted from .9375rem */
     font-weight: 400;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .skill-list li::before {
@@ -608,6 +675,12 @@ footer {
     /* descendant selector ---> 'a' */
     .cta-group a {
         margin: 0;
+        width: 100%;
+    }
+
+    a.cta-resume p {
+        transform: translate(20px, -10px);
+        padding: -100px;
         width: 100%;
     }
 
