@@ -43,9 +43,9 @@
   bottom: 20px; 
   right: 30px; 
   z-index: 99; 
-  border: .125rem solid #7B7B7B;
+  border: .125rem solid #7a7a7a;
   background-color: #F8F8F8; 
-  color: #2b2b2b;
+  color: #7a7a7a;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -63,6 +63,7 @@
 
 #backToTop:hover {
   background-color: #5a6fd1; /* Slightly darker shade of your purple */
+  border: .125rem solid #5a6fd1;
   color: #F8F8F8;
   transform: translateY(-5px); /* Subtle lift effect */
   transition: color var(--transition-speed);
@@ -523,7 +524,7 @@ padding-left: 35px;               /* This prevents the clipping of the icon */
 }
 
 .project-card {
-    flex-basis: calc(33.333% - 1.25rem);
+    flex-basis: calc(50% - 1.25rem);
     min-width: 17.5rem;
     background-color: var(--white);
     border-radius: var(--border-radius);
@@ -531,12 +532,12 @@ padding-left: 35px;               /* This prevents the clipping of the icon */
     /* Converted from 0 .25rem .9375rem */
     overflow: hidden;
     transition: transform var(--transition-speed);
-    border: .125rem solid rgb(47, 0, 255);
+    /* border: .125rem solid rgb(47, 0, 255); */
 }
 
 .project-card .project-image {
     width: 100%;
-    height: 10rem;
+    height: 20rem; /* change the image height here */
     /* use auto to have the height adjusted relative */
     background-repeat: no-repeat;
     background-position: center center;
@@ -561,7 +562,7 @@ padding-left: 35px;               /* This prevents the clipping of the icon */
     font-size: 1.5rem;
     /* Converted from 1.5em */
     color: var(--secondary-color);
-    border: .125rem solid red;
+    /* border: .125rem solid red; */
 }
 
 .project-details {
@@ -583,6 +584,14 @@ padding-left: 35px;               /* This prevents the clipping of the icon */
     /* Converted from .9375rem */
     font-size: .95rem;
     /* Converted from 0.95em */
+}
+
+.project-details p.tech-info {
+    font-size: .8rem;
+}
+
+.project-details span {
+    font-weight: 600;
 }
 
 .project-links a {
