@@ -3,7 +3,8 @@
     --primary-color: #2b2b2b;
     --secondary-color: #7B7B7B;
     --tertiary-color: #F8F8F8;
-    --nav-color: #f8f8f8f1; /* controls nav color opacity */
+    --nav-color: #f8f8f8f1;
+    /* controls nav color opacity */
     --accent-color: #6e84e7;
     --white: #fff;
     /* #fff == #ffffff */
@@ -13,12 +14,12 @@
     --transition-speed: 0.15s;
     font-size: 100%;
     /* Default 1rem. 16px = 1rem = 100%  */
-    
+
     .inter-fontstyle,
     .landing-content .cta-group {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 3.75rem;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 300;
+        font-size: 3.75rem;
     }
 
     .landing-content h1,
@@ -39,34 +40,40 @@
 }
 
 #backToTop {
-  position: fixed; 
-  bottom: 20px; 
-  right: 30px; 
-  z-index: 99; 
-  border: .125rem solid #7a7a7a;
-  background-color: #F8F8F8; 
-  color: #7a7a7a;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: .125rem solid #7a7a7a;
+    background-color: #F8F8F8;
+    color: #7a7a7a;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 
-  /* FADE LOGIC */
-  opacity: 0;           /* Start invisible */
-  visibility: hidden;    /* Prevent clicking while invisible */
-  transition: opacity 0.4s ease, visibility 0.4s ease; 
+    /* FADE LOGIC */
+    opacity: 0;
+    /* Start invisible */
+    visibility: hidden;
+    /* Prevent clicking while invisible */
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 #backToTop.show {
-  opacity: 1;           /* Fade in */
-  visibility: visible;  /* Make clickable */
+    opacity: 1;
+    /* Fade in */
+    visibility: visible;
+    /* Make clickable */
 }
 
 #backToTop:hover {
-  background-color: #5a6fd1; /* Slightly darker shade of your purple */
-  border: .125rem solid #5a6fd1;
-  color: #F8F8F8;
-  transform: translateY(-5px); /* Subtle lift effect */
-  transition: color var(--transition-speed);
+    background-color: #5a6fd1;
+    /* Slightly darker shade of your purple */
+    border: .125rem solid #5a6fd1;
+    color: #F8F8F8;
+    transform: translateY(-5px);
+    /* Subtle lift effect */
+    transition: color var(--transition-speed);
 }
 
 html {
@@ -93,7 +100,7 @@ body {
     /* Converts to 75rem */
     margin: 0 auto;
     /* top & bottom = 0rem, left and right = flushed; */
-    
+
     /* border: .0625rem solid gray; */
 }
 
@@ -106,8 +113,9 @@ h2 {
     margin-bottom: 1.875rem;
     /* padding: 0px 40px 40px; */
     color: var(--primary-color);
-    
-    border-top: .0625rem solid #7c7c7c;     /* the border acts as a divider line for different section */
+
+    border-top: .0625rem solid #7c7c7c;
+    /* the border acts as a divider line for different section */
 }
 
 
@@ -168,13 +176,15 @@ nav a:hover {
     /* tl, tr, bl, br */
     margin-top: 3rem;
     margin-bottom: 0px;
-    padding: 0px; /* top, right, btm, left */
+    padding: 0px;
+    /* top, right, btm, left */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca30' d='M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6'/%3E%3C/svg%3E");
     background-size: 40%;
-    background-position: 120px; 
-    scroll-margin-top: 100px; /* the top margin given when click on different sections */
+    background-position: 120px;
+    scroll-margin-top: 100px;
+    /* the top margin given when click on different sections */
     /* border: .125rem solid #ff8080; */
-    
+
 }
 
 .landing-content {
@@ -190,10 +200,12 @@ nav a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    overflow: hidden; /* This clips the zoom so it stays a circle */
-    margin: 0 auto -10px auto; /* Centers the circle and keeps your margin-bottom */
+    overflow: hidden;
+    /* This clips the zoom so it stays a circle */
+    margin: 0 auto -10px auto;
+    /* Centers the circle and keeps your margin-bottom */
     /* border: .25rem solid var(--primary-color); */
-    
+
 }
 
 /* This is the Actual Image inside */
@@ -201,9 +213,9 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
     /* USE TRANSFORM TO ZOOM */
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .profile-pic-large {
@@ -213,7 +225,7 @@ nav a:hover {
     object-fit: cover;
     border: .25rem solid var(--primary-color);
     margin-bottom: -20px;
-    
+
 }
 
 .landing-content h1 {
@@ -224,14 +236,14 @@ nav a:hover {
 
 
 .landing-content.gridlines {
-border: 1px solid #0f0f0f;
-  /* box-shadow can "fake" the grid lines extending from the box */
-  box-shadow: 
-    0 40px 0 -39px #0f0f0f, 
-    0 -40px 0 -39px #0f0f0f,
-    40px 0 0 -39px #0f0f0f,
-    -40px 0 0 -39px #0f0f0f;
-    
+    border: 1px solid #0f0f0f;
+    /* box-shadow can "fake" the grid lines extending from the box */
+    box-shadow:
+        0 40px 0 -39px #0f0f0f,
+        0 -40px 0 -39px #0f0f0f,
+        40px 0 0 -39px #0f0f0f,
+        -40px 0 0 -39px #0f0f0f;
+
 
 }
 
@@ -240,23 +252,29 @@ border: 1px solid #0f0f0f;
     font-weight: 390;
     color: var(--secondary-color);
     margin-bottom: 1.25rem;
-    
+
 }
 
 .landing-content p.short-border {
-  position: relative; /* Container must be relative */
-   
+    position: relative;
+    /* Container must be relative */
+
 }
 
 .short-border::after {
-  content: "";          /* To create this element: "border" */
-  position: absolute;
-  left: 25%;
-  top: -20px;           /* Position of the "border" */
-  width: 50%;           /* Length of the "border"*/
-  height: 1px;        /* Thickness of the "border" */
-  background: black;  /* Color of the "border" */
-  
+    content: "";
+    /* To create this element: "border" */
+    position: absolute;
+    left: 25%;
+    top: -20px;
+    /* Position of the "border" */
+    width: 50%;
+    /* Length of the "border"*/
+    height: 1px;
+    /* Thickness of the "border" */
+    background: black;
+    /* Color of the "border" */
+
 }
 
 
@@ -327,31 +345,39 @@ border: 1px solid #0f0f0f;
 
 .scroll-down {
     display: flex;
-    justify-content: center; /* Horizontal center */
-    width: 100%;             /* Ensure it spans the whole width */
-    margin-top: 0rem;        /* Move it down from whatever is above it */
+    justify-content: center;
+    /* Horizontal center */
+    width: 100%;
+    /* Ensure it spans the whole width */
+    margin-top: 0rem;
+    /* Move it down from whatever is above it */
 }
 
- .arrow-down svg {
-    width: 1.5rem;                  /* Adjust size */
+.arrow-down svg {
+    width: 1.5rem;
+    /* Adjust size */
     height: 1.5rem;
-    fill: #1b1b1b49;              /* set the color */
-    transform: translateY(0px);     /* set the vertical position */
-    
+    fill: #1b1b1b49;
+    /* set the color */
+    transform: translateY(0px);
+    /* set the vertical position */
+
 }
+
 /* 2. About Me Section */
 #about {
     background-color: var(--white);
     z-index: -100;
-    scroll-margin-top: 60px;    /* the top margin given when click on different sections */
-    
+    scroll-margin-top: 60px;
+    /* the top margin given when click on different sections */
+
 }
 
 .about-image {
     flex: 1;
     text-align: center;
     /* border: 2px solid #ff8080; */
-    
+
 }
 
 .about-image img {
@@ -389,7 +415,8 @@ border: 1px solid #0f0f0f;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23cacaca50' d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 200px;
-    background-position: 650px 0px;         /* move from Left and Top */
+    background-position: 650px 0px;
+    /* move from Left and Top */
     z-index: -1;
     opacity: 1;
     /* border: .125rem solid #2600fd; */
@@ -403,7 +430,7 @@ border: 1px solid #0f0f0f;
     /* Converted from 1.25rem */
     margin: 1.5625rem 0;
     /* Converted from 1.5625rem 0 */
-    
+
 }
 
 .info-card {
@@ -416,7 +443,7 @@ border: 1px solid #0f0f0f;
     text-align: center;
     background-color: var(--white);
     box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, 0.05);
-    
+
 }
 
 .info-card h4 {
@@ -427,10 +454,12 @@ border: 1px solid #0f0f0f;
 }
 
 .bi-bi-grip-vertical {
-  width: 20px;  /* Set your width */
-  height: 20px; /* Keep height the same for 1:1 ratio */
-  margin-bottom: 3px;
-  /* color: #ff8080; */
+    width: 20px;
+    /* Set your width */
+    height: 20px;
+    /* Keep height the same for 1:1 ratio */
+    margin-bottom: 3px;
+    /* color: #ff8080; */
 }
 
 /* 3. Experience Section */
@@ -474,12 +503,15 @@ border: 1px solid #0f0f0f;
 }
 
 .experience-card h3.techstack {
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236e84e7' class='bi bi-stack' viewBox='0 0 16 16'%3E%3Cpath d='m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z'/%3E%3Cpath d='m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z'/%3E%3C/svg%3E");
-background-repeat: no-repeat;
-background-size: 25px; /* Adjust size of the icon */
-background-position: left;
-background-position: 0px 0px;         /* move from Left and Top */
-padding-left: 35px;               /* This prevents the clipping of the icon */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236e84e7' class='bi bi-stack' viewBox='0 0 16 16'%3E%3Cpath d='m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z'/%3E%3Cpath d='m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    /* Adjust size of the icon */
+    background-position: left;
+    background-position: 0px 0px;
+    /* move from Left and Top */
+    padding-left: 35px;
+    /* This prevents the clipping of the icon */
 
 }
 
@@ -537,7 +569,8 @@ padding-left: 35px;               /* This prevents the clipping of the icon */
 
 .project-card .project-image {
     width: 100%;
-    height: 20rem; /* change the image height here */
+    height: 20rem;
+    /* change the image height here */
     /* use auto to have the height adjusted relative */
     background-repeat: no-repeat;
     background-position: center center;
@@ -674,6 +707,28 @@ footer {
 }
 
 /* RESPONSIVE DESIGN (Media Queries) */
+
+
+@media (max-width: 480px) {
+        nav {
+        /* Prevents items from jumping to the next line */
+        flex-wrap: nowrap; 
+        /* Keeps everything in a row */
+        flex-direction: row; 
+        /* Reduces horizontal padding to save space */
+        padding: 0.5rem; 
+    }
+
+    nav a {
+        /* Reduce horizontal margin so they fit side-by-side */
+        margin: 5px 10px; 
+        /* Optional: Shrink font size slightly for small screens */
+        font-size: 0.9rem; 
+        /* Prevents text from wrapping inside the link */
+        white-space: nowrap; 
+    }
+}
+
 /* Converted from 37.5rem */
 @media(max-width: 650px) {
 
@@ -717,6 +772,10 @@ footer {
         width: 100%;
     }
 
+    .cta-resume {
+    margin-top: 30px !important; /* Moves only the Resume button down */
+}
+
     a.cta-resume p {
         transform: translate(20px, -10px);
         padding: -100px;
@@ -733,10 +792,10 @@ footer {
     .project-card {
         /* Force the card to take up the full available width */
         flex-basis: 100%;
-        
+
         /* Remove or reduce min-width so it doesn't overflow small screens */
-        min-width: 0; 
-        
+        min-width: 0;
+
         /* Optional: adjust margins if the container has its own padding */
         margin: 0;
     }
@@ -744,7 +803,8 @@ footer {
     .projects-grid {
         /* Reduce the gap slightly for mobile to give the cards more breathing room */
         gap: 1.25rem;
-        padding: 0 1rem; /* Ensures the card doesn't touch the very edge of the screen */
+        padding: 0 1rem;
+        /* Ensures the card doesn't touch the very edge of the screen */
     }
 
 }
@@ -761,12 +821,15 @@ footer {
     /* change the about grid to a single column */
     .about-grid {
         flex-direction: column;
-        align-items: center; /* Centers the content vertically */
-        text-align: center;  /* Optional: centers text for a better mobile look */
+        align-items: center;
+        /* Centers the content vertically */
+        text-align: center;
+        /* Optional: centers text for a better mobile look */
     }
 
     .about-text {
-        margin: 0; /* Removes the negative margin used for desktop spacing */
+        margin: 0;
+        /* Removes the negative margin used for desktop spacing */
         flex: none;
         width: 100%;
     }
